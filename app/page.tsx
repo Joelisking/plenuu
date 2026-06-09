@@ -1,19 +1,35 @@
-import { Button } from "@/components/ui/button"
+import { SiteHeader } from "@/components/site/site-header"
+import { Hero } from "@/components/site/hero"
+import { Departments } from "@/components/site/departments"
+import { FeaturedProducts } from "@/components/site/featured-products"
+import { DealsBand } from "@/components/site/deals-band"
+import { BestSellers } from "@/components/site/best-sellers"
+import { Journey } from "@/components/site/journey"
+import { VendorCta } from "@/components/site/vendor-cta"
+import { Delivery } from "@/components/site/delivery"
+import { TrustStrip } from "@/components/site/trust-strip"
+import { Newsletter } from "@/components/site/newsletter"
+import { SiteFooter } from "@/components/site/site-footer"
+import { CartDrawer } from "@/components/site/cart-drawer"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <Departments />
+        <FeaturedProducts />
+        <DealsBand />
+        <BestSellers />
+        <Journey />
+        <VendorCta />
+        <Delivery />
+        <TrustStrip />
+        <Newsletter />
+      </main>
+      <SiteFooter />
+      <CartDrawer />
+    </>
   )
 }
