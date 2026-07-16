@@ -5,7 +5,10 @@ import { ArrowUpRight, ShoppingBag } from "lucide-react"
 
 import { brand, departments } from "@/lib/catalog"
 
-const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] })
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+})
 
 const directions = [
   {
@@ -22,7 +25,7 @@ const directions = [
     name: "Storefront",
     desc: "A clean retail landing on soft grey: white rounded cards, big bold headlines, category tiles and a featured-collections bento. Monochrome, modern.",
     thumb: departments[1].image,
-    accent: "#151515",
+    accent: "#ffffff",
   },
   {
     href: "/c",
@@ -36,22 +39,24 @@ const directions = [
 
 export default function Index() {
   return (
-    <main className={`${manrope.className} min-h-screen bg-[#0b0c10] px-5 py-16 text-white lg:px-8 lg:py-24`}>
+    <main
+      className={`${manrope.className} min-h-screen bg-[#0b0c10] px-5 py-16 text-white lg:px-8 lg:py-24`}
+    >
       <div className="mx-auto max-w-[80rem]">
         <header className="mb-14 lg:mb-20">
-          <p className="mb-5 flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white/45">
+          <p className="mb-5 flex items-center gap-2 text-[0.78rem] font-semibold tracking-[0.22em] text-white/45 uppercase">
             <span className="flex size-5 items-center justify-center rounded-full bg-white/10">
               <ShoppingBag className="size-3" strokeWidth={2.4} />
             </span>
             {brand.name} · Marketplace homepage · Design directions
           </p>
-          <h1 className="max-w-3xl text-balance text-[clamp(2.2rem,5vw,4rem)] font-extrabold leading-[1.02] tracking-[-0.04em]">
+          <h1 className="max-w-3xl text-[clamp(2.2rem,5vw,4rem)] leading-[1.02] font-extrabold tracking-[-0.04em] text-balance">
             Three directions, one marketplace.
           </h1>
           <p className="mt-5 max-w-xl text-[1.02rem] leading-relaxed text-white/60">
-            Each is a complete, clickable homepage for {brand.name} — the Ghana ⇄ USA
-            marketplace — in a different aesthetic. Open one, then we develop your
-            favourite and discard the rest.
+            Each is a complete, clickable homepage for {brand.name} — the Ghana
+            ⇄ USA marketplace — in a different aesthetic. Open one, then we
+            develop your favourite and discard the rest.
           </p>
         </header>
 
@@ -73,13 +78,25 @@ export default function Index() {
               </div>
               <div className="flex flex-1 flex-col justify-between p-7">
                 <div>
-                  <p className="text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-white/40">{d.tag}</p>
-                  <h2 className="mt-1.5 text-[1.6rem] font-bold tracking-[-0.02em]">{d.name}</h2>
-                  <p className="mt-3 text-[0.94rem] leading-relaxed text-white/55">{d.desc}</p>
+                  <p className="text-[0.76rem] font-semibold tracking-[0.18em] text-white/40 uppercase">
+                    {d.tag}
+                  </p>
+                  <h2 className="mt-1.5 text-[1.6rem] font-bold tracking-[-0.02em]">
+                    {d.name}
+                  </h2>
+                  <p className="mt-3 text-[0.94rem] leading-relaxed text-white/55">
+                    {d.desc}
+                  </p>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-2 text-[0.92rem] font-semibold" style={{ color: d.accent }}>
+                <span
+                  className="mt-8 inline-flex items-center gap-2 text-[0.92rem] font-semibold"
+                  style={{ color: d.accent }}
+                >
                   View homepage
-                  <ArrowUpRight className="size-[1.05rem] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={2.2} />
+                  <ArrowUpRight
+                    className="size-[1.05rem] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    strokeWidth={2.2}
+                  />
                 </span>
               </div>
             </Link>
